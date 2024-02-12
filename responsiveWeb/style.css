@@ -1,0 +1,90 @@
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body{
+    margin: 0px;
+    font-size: 16px;
+}
+.main-countiner{
+    width: 100%;
+    max-width: 900px;
+    margin: 0px auto;
+    font-size: 1em;
+}
+header, footer{
+    background-color: rgb(29, 18, 18);
+    color: white;
+}
+header nav{
+    display: flex;
+
+}
+header nav span{
+    margin-right: 15px;
+    border-radius: 10px;
+    border: 1px solid goldenrod;
+    padding: 5px 10px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+}
+main .content{
+    padding: 20px;
+}
+main .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
+main .menu span{
+    border-bottom: 2px solid goldenrod;
+    margin-bottom: 5px;
+}
+main .content .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+main .content .cards .card{
+    background-color: rgb(47, 47, 112);
+    padding: 40px 0px;
+    margin: 10px;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 800px){
+    main{
+        grid-template-columns: 2fr 4fr;
+
+    }
+    main .content .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:600px){
+    main .menu{
+        display: none;
+    }
+    main{
+        grid-template-columns: 1fr;
+
+    }
+    main .content .cards{
+        grid-template-columns: 1fr;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    header nav span{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 2em;
+    }
+}
